@@ -1,12 +1,30 @@
-## this is magento 2 espay plugin
+# ESPAY MAGENTO 2 PLUGIN
+Powered by [ESPAY.ID](https://nodejs.org/)
 
-INSTRUCTION:
+### Environtment
+Tested with,
+Magento 2.5.x
+PHP 5.6.x
 
-1. COPY THIS TO YOUR ROOT
-2. IMPORT SQL FILES ON /app/code/Espay/Pg/Sql/ with command,
+### Installation
 
-	- mysql -u root -p <databasename> < install_sales_order_status.sql
-	- mysql -u root -p <databasename> < install_sales_order_statu_state.sql
+Step 1:
+```sh
+Copy all of this to your ROOT folder
+```
 
-3. run bin/magento setup:upgrade
-4. done.
+Step 2:
+```sh
+Import Sql file provided in /app/code/Espay/Pg/Sql/ with gui or commands,
+- mysql -u root -p <database-name> < install_sales_order_status.sql
+- mysql -u root -p <database-name> < install_sales_order_status_state.sql
+```
+
+Step 3:
+```sh
+Run bin/magento setup:upgrade
+Run bin/magento setup:di:compile
+```
+Done.
+
+
