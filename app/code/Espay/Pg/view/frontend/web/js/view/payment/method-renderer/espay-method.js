@@ -36,7 +36,7 @@ define(
                       var result = parsed.data;
 
                       $.each(result, function (i, item) {
-                          var prvalue = item.bankCode + ':' + item.productCode;
+                          var prvalue = item.bankCode + ':' + item.productCode + ':' + item.productName;
                           $('#sl_payment').append($('<option>', {
                               value: prvalue,
                               text : item.productName
@@ -72,12 +72,15 @@ define(
                 var product_value = $("#sl_payment option:selected").val();
 
                 var form = $("#f_redirect");
+                var urlOrderSummary = url.build('espay/payment/ordersummary');
                 var urlRedirect = url.build('espay/payment/redirecting');
-                form.attr("action", urlRedirect);
+
+                form.attr("action", urlOrderSummary);
 
                 $("#quote_id").val(quoteId);
                 $("#back_url").val(backUrl);
                 $("#product_value").val(product_value);
+                $("#urlRedirect").val(urlRedirect);
                 form.submit();
 
             }
