@@ -43,7 +43,6 @@ class OrderSummary extends \Magento\Framework\App\Action\Action
 
       $om = $this->_objectManager;
       $config = $om->get('Magento\Framework\App\Config\ScopeConfigInterface');
-      $isProduction = $config->getValue('payment/espay/is_production', \Magento\Store\Model\ScopeInterface::SCOPE_STORE)=='1'?true:false;
 
       $quote = $om->create('Magento\Sales\Model\Order')->load($quote_id);
       $order_id = $quote->getRealOrderId();
