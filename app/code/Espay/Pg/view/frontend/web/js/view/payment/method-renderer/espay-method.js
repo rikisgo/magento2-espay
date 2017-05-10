@@ -46,6 +46,7 @@ define(
                           $('#sl_payment').append($('<label>', {
                               class: 'drinkcard-cc',
                               style: 'background-image:url(https://kit.espay.id/images/products/'+item.productCode+'.png);',
+                              title: item.productName,
                               for: item.productCode
                           }));
                       });
