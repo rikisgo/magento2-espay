@@ -59,6 +59,7 @@ class Redirecting extends \Magento\Framework\App\Action\Action
       $resultPage->getLayout()->getBlock('Espay_main')->setBankCode($product_value[0]);
       $resultPage->getLayout()->getBlock('Espay_main')->setProductCode($product_value[1]);
       $resultPage->getLayout()->getBlock('Espay_main')->setKey($client_key);
+      $resultPage->getLayout()->getBlock('Espay_main')->setUrlJs($url);
       $resultPage->getLayout()->getBlock('Espay_main')->setError($error);
 
       return $resultPage;

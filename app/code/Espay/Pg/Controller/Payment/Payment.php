@@ -70,7 +70,6 @@ class Payment extends \Magento\Framework\App\Action\Action
                 if(!empty($order->getRealOrderId())){
                   // Step 4: Has order been processed?
                   if($order->getStatus() === $default_order_status){
-
                       // Check status avaibility
                       $statusModel = $om->create('Magento\Sales\Model\Order\Status')->load('accpt_espay_'.$req_prodcode);
                       $status = empty($statusModel->getStatus()) ? 'payment_accepted_espay' : 'accpt_espay_'.$req_prodcode;
